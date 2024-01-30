@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap');
+
+:root{
+    --bg-page:hsl(47, 88%, 63%);
+    --bg-card:hsl(0, 0%, 100%);
+    --shadow-card:hsl(0, 0%, 7%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Figtree';
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--bg-page);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 400px;
+    height: 600px;
+    background: var(--bg-card);
+    border-radius: 20px;
+    border: 1px solid var(--shadow-card); 
+    font-size: 16px;
+    overflow: hidden;
+    box-shadow: 8px 10px var(--shadow-card);
+}
+
+.card-wrapper{ 
+    display: flex;
+    flex-direction: column;
+    margin: 20px; 
+    height: 100%;
+    width: 90%;
+}
+
+.card-img{
+    border-radius: 10px;
+}
+
+.card-btn{
+    width: 80px;
+    height: 25px;
+    background: var(--bg-page);
+    border: none;
+    margin-top: 20px;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+.card-date{
+    margin-top: 15px;
+}
+
+.card-topic{
+    font-weight: 800; 
+    font-size: 25px;
+    margin-top: 20px;
+}
+
+.card-topic:hover{
+    cursor: pointer;
+    color: var(--bg-page);
+}
+
+.card-desc{
+    margin-top: 20px;
+    color: #5c5c5c;
+}
+
+.card-profile{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-profile-img{
+    width: 50px;
+    object-fit: contain;
+}
+
+.card-profile-name{
+    font-weight: 800;
+}
+
+@media screen and (max-width:1024px) {
+    .card{
+        width: 300px;
+        height: 450px;
+    }
+    .card-img{
+        width: 95%;
+    }
+    .card-date{
+        font-size: 13px;
+    }
+    .card-topic{
+        font-size: 20px;
+        margin-top: 15px;
+    }
+    .card-desc{
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    .card-profile-img{
+        width: 40px;
+    }
+    .card-profile-name{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .card{
+        width: 250px;
+        height: 400px;
+    }
+    .card-img{
+        width: 95%;
+    }
+    .card-date{
+        font-size: 10px;
+    }
+    .card-topic{
+        font-size: 15px;
+        margin-top: 10px;
+    }
+    .card-desc{
+        margin-top: 10px;
+        font-size: 12px;
+    } 
+}
